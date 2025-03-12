@@ -1,115 +1,288 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VOVK SUPPLY</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        body {
-            align-items: center;
-            background-color: white;
-            display: flex;
-            flex-direction: column;
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            min-height: 100dvh;
-            position: relative;
-        }
+      body {
+        display: flex;
+        flex-direction: column;
+        font-family: "Inter", sans-serif;
+        margin: 0;
+        width: 100%;
+      }
+      body section {
+        position: relative;
+      }
+      .section1 {
+        align-items: center;
+        background: linear-gradient(to bottom right, #01ddff, #fe01d4);
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        min-height: 100dvh;
+        position: relative;
+      }
 
-        .background-svg {
-            position: absolute;
-            top: -33vh;
-            left: -33vw;
-            width: 100vw;
-            height: 100vh;
-            z-index: -1;
-        }
+      .section1 .background-svg {
+        position: absolute;
+        top: -33vh;
+        left: -33vw;
+        width: 100vw;
+        height: 100vh;
+        z-index: 0;
+      }
 
-        .logo-container {
-            align-self: flex-end;
-            border-radius: 3vw;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            min-width: 33vw;
-            padding: 2vw;
-        }
+      .logo-container {
+        justify-content: flex-end;
+        display: flex;
+        width: 100%;
+      }
 
-        .logo-container, .main-text {
-            background-color: rgba(255 255 255 / 0.8);
-        }
+      .logo {
+        height: auto;
+        width: clamp(240px, 50vw, 480px);
+        /* background-color: rgba(127 111 234 / 0.5); */
+      }
 
-        .logo-circle {
-            width: 16vw;
-            height: 16vw;
-            border: 2px solid black;
-            border-radius: 50%;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto;
-            animation: rotate 20s linear infinite;
-        }
+      .tagline {
+        color: #333;
+        font-family: serif;
+        font-size: max(2vh, 1rem);
+        text-align: center;
+        border-top: 2px solid black;
+        margin: 0;
+        padding-top: 2vh;
+      }
 
+      .main-text {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        font-size: max(5vh, 1.25rem);
+        justify-content: center;
+        max-width: 800px;
+        text-align: center;
+        padding: 0 20px;
+      }
+      .main-text h2 {
+        font-size: 2rem;
+      }
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
 
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+      }
 
-        .logo-text {
-            font-family: serif;
-            font-size: max(5vh, 1.5rem);
-            margin: 5dvh 0;
-            text-align: center;
-        }
-
-        .tagline {
-            color: #333;
-            font-family: serif;
-            font-size: max(2vh, 1rem);
-            text-align: center;
-            border-top: 2px solid black;
-            margin: 0;
-            padding-top: 2vh;
-        }
-
-        .main-text {
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-            font-size: max(5vh, 1.25rem);
-            justify-content: center;
-            max-width: 800px;
-            text-align: center;
-            padding: 0 20px;
-        }
+      .section2 {
+        background-color: black;
+        color: white;
+        min-height: 100dvh;
+        overflow: hidden;
+        padding: 2rem;
+      }
+      section h2 {
+        text-transform: uppercase;
+        margin-bottom: 4rem;
+      }
+      .section2 .background-svg {
+        left: 33vw;
+        position: absolute;
+        top: -10vh;
+        width: 100vw;
+        height: 100vh;
+        z-index: 0;
+      }
+      .section2 p,
+      .section3 ul {
+        max-width: 480px;
+        font-size: 1.5rem;
+        line-height: 1.5;
+      }
+      .section3 {
+        background-color: #e9e7df;
+        color: black;
+        min-height: 100dvh;
+        overflow: hidden;
+        padding: 2rem;
+      }
+      .section3 h2, .section3 ul {
+        display: block;
+        margin-left: auto;
+      }
+      .section3 h2 {
+        margin-right: 25vw;
+        text-align: right;
+      }
+      .section3 li {
+        margin-bottom: 1em;
+        text-transform: uppercase;
+      }
+      .section3 .background-svg {
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 50vw;
+        height: 100vh;
+        z-index: 0;
+      }
+      .section3 ul {
+        background-color: rgba(255 255 255 / 0.8);
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
+        position: relative;
+        z-index: 1;
+      }
     </style>
-</head>
-<body>
-    <svg class="background-svg" viewBox="0 0 300 300" preserveAspectRatio="none">
-        <polygon points="120,200 220,100 250,250 200,280" stroke="black" stroke-width="0.5" fill="none"/>
-        <polygon points="100,80 300,50 280,220 180,250" stroke="black" stroke-width="0.5" fill="none"/>
-        <polygon points="0,50 200,50 300,100 200,200" stroke="black" stroke-width="0.5" fill="none"/>
-        <polygon points="50,0 280,50 250,190 200,180" stroke="black" stroke-width="0.5" fill="none"/>
-        <polygon points="230,0 300,0 270,80 210,140" stroke="black" stroke-width="0.5" fill="none"/>
-        <polygon points="120,50 200,0 250,120 180,125" stroke="black" stroke-width="0.5" fill="none"/>
-        <!-- <polygon points="100,100 300,100 300,300 100,300" stroke="black" stroke-width="0.5" fill="none"/> -->
-    </svg>
-    <div class="logo-container">
-        <div class="logo-circle">
-            <span>V</span>
-        </div>
-        <h1 class="logo-text">VOVK SUPPLY</h1>
-        <p class="tagline">Будь-який товар. Будь-де. Під ключ!</p>
-    </div>
+  </head>
 
-    <div class="main-text">
-        <p>ГЛОБАЛЬНИЙ СЕРВІС ЗАКУПІВЛІ ТА ДОСТАВКИ ТОВАРІВ «ПОСТАЧАННЯ ПІД КЛЮЧ»</p>
-    </div>
-</body>
+  <body>
+    <h1 class="visually-hidden">Vovk Supply</h1>
+    <section class="section1">
+      <svg
+        class="background-svg"
+        viewBox="0 0 300 300"
+        preserveAspectRatio="none"
+      >
+        <polygon
+          points="120,200 220,100 250,250 200,280"
+          stroke="black"
+          stroke-width="0.5"
+          fill="none"
+        />
+        <polygon
+          points="100,80 300,50 280,220 180,250"
+          stroke="black"
+          stroke-width="0.5"
+          fill="none"
+        />
+        <polygon
+          points="0,50 200,50 300,100 200,200"
+          stroke="black"
+          stroke-width="0.5"
+          fill="none"
+        />
+        <polygon
+          points="50,0 280,50 250,190 200,180"
+          stroke="black"
+          stroke-width="0.5"
+          fill="none"
+        />
+        <polygon
+          points="230,0 300,0 270,80 210,140"
+          stroke="black"
+          stroke-width="0.5"
+          fill="none"
+        />
+        <polygon
+          points="120,50 200,0 250,120 180,125"
+          stroke="black"
+          stroke-width="0.5"
+          fill="none"
+        />
+        <!-- <polygon points="100,100 300,100 300,300 100,300" stroke="black" stroke-width="0.5" fill="none"/> -->
+      </svg>
+      <div class="logo-container">
+        <img
+          alt="Логотип Vovk Supply"
+          class="logo"
+          height="300"
+          src="./74118704-transparent.png"
+          width="300"
+        />
+      </div>
+      <div class="main-text">
+        <h2>
+          ГЛОБАЛЬНИЙ СЕРВІС ЗАКУПІВЛІ ТА ДОСТАВКИ ТОВАРІВ «ПОСТАЧАННЯ ПІД КЛЮЧ»
+        </h2>
+      </div>
+    </section>
+    <section class="section2">
+      <h2>Хто ми?</h2>
+
+      <p>VOVK SUPPLY – це глобальний сервіс закупівлі та доставки товарів.</p>
+      <p>
+        Ми працюємо як агент-посередник, який займається всім процесом: від
+        пошуку постачальників до доставки товару на склад клієнта.
+      </p>
+      <svg
+        class="background-svg"
+        viewBox="0 0 300 300"
+        preserveAspectRatio="none"
+      >
+        <polygon
+          points="120,200 220,100 250,250 200,280"
+          stroke="white"
+          stroke-width="0.5"
+          fill="none"
+        />
+        <polygon
+          points="100,80 300,50 280,220 180,250"
+          stroke="white"
+          stroke-width="0.5"
+          fill="none"
+        />
+        <polygon
+          points="0,50 200,50 300,100 200,200"
+          stroke="white"
+          stroke-width="0.5"
+          fill="none"
+        />
+        <polygon
+          points="50,0 280,50 250,190 200,180"
+          stroke="white"
+          stroke-width="0.5"
+          fill="none"
+        />
+        <polygon
+          points="230,0 300,0 270,80 210,140"
+          stroke="white"
+          stroke-width="0.5"
+          fill="none"
+        />
+        <polygon
+          points="120,50 200,0 250,120 180,125"
+          stroke="white"
+          stroke-width="0.5"
+          fill="none"
+        />
+        <!-- <polygon points="100,100 300,100 300,300 100,300" stroke="black" stroke-width="0.5" fill="none"/> -->
+      </svg>
+    </section>
+    <section class="section3">
+      <h2>Чому ми?</h2>
+      <svg
+        class="background-svg"
+        viewBox="0 0 300 300"
+        preserveAspectRatio="none"
+      >
+       <line x1="0" y1="20" x2="300" y2="140" stroke="black" /> 
+        <!-- <polygon points="100,100 300,100 300,300 100,300" stroke="black" stroke-width="0.5" fill="none"/> -->
+      </svg>
+      <ul>
+        <li>Пошук та закупівля товарів з будь-якої країни світу.</li>
+
+        <li>
+          Доставка "під ключ" – від вибору постачальника до митного оформлення.
+        </li>
+        <li>Перевірка якості та легальності товару перед відправкою.</li>
+        <li>Ми працюємо як з роздрібними, так і з корпоративними клієнтами.</li>
+      </ul>
+    </section>
+  </body>
 </html>
